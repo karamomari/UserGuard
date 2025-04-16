@@ -1,0 +1,41 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\karam\\OneDrive\\Desktop\\New Projects\\UserGuard API\\wwwroot\\images\\maintenance\\1801088a-5928-472f-9ad3-b4fc9f4ba186.png",
+      "PackagePath": "staticwebassets\\images\\maintenance\\1801088a-5928-472f-9ad3-b4fc9f4ba186.png"
+    },
+    {
+      "Id": "C:\\Users\\karam\\OneDrive\\Desktop\\New Projects\\UserGuard API\\wwwroot\\images\\maintenance\\2aa8c0d1-f2d2-4d7c-9fb6-f62b05538879.png",
+      "PackagePath": "staticwebassets\\images\\maintenance\\2aa8c0d1-f2d2-4d7c-9fb6-f62b05538879.png"
+    },
+    {
+      "Id": "C:\\Users\\karam\\OneDrive\\Desktop\\New Projects\\UserGuard API\\wwwroot\\images\\maintenance\\3b18f185-76b0-4edf-946f-9ecfe2e58504.png",
+      "PackagePath": "staticwebassets\\images\\maintenance\\3b18f185-76b0-4edf-946f-9ecfe2e58504.png"
+    },
+    {
+      "Id": "C:\\Users\\karam\\OneDrive\\Desktop\\New Projects\\UserGuard API\\wwwroot\\images\\maintenance\\799d3717-c71a-4af2-8a1a-cd24b5e7d067.png",
+      "PackagePath": "staticwebassets\\images\\maintenance\\799d3717-c71a-4af2-8a1a-cd24b5e7d067.png"
+    },
+    {
+      "Id": "C:\\Users\\karam\\OneDrive\\Desktop\\New Projects\\UserGuard API\\wwwroot\\images\\maintenance\\e86310d1-3574-49a9-8360-5aacc91cc39c.png",
+      "PackagePath": "staticwebassets\\images\\maintenance\\e86310d1-3574-49a9-8360-5aacc91cc39c.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.UserGuard API.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.UserGuard API.props",
+      "PackagePath": "build\\UserGuard API.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.UserGuard API.props",
+      "PackagePath": "buildMultiTargeting\\UserGuard API.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.UserGuard API.props",
+      "PackagePath": "buildTransitive\\UserGuard API.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
