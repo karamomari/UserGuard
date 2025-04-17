@@ -1,4 +1,6 @@
 ﻿
+using Microsoft.EntityFrameworkCore;
+
 namespace UserGuard_API.Model
 {
     public class AcademyAPI:IdentityDbContext<ApplicationUser>
@@ -30,6 +32,13 @@ namespace UserGuard_API.Model
                 .HasOne(e => e.User)
                 .WithOne(u => u.Employee)
                 .HasForeignKey<Employee>(e => e.ApplicationUserId);
+
+
+            builder.Entity<Branch>()
+             .HasOne(b => b.Manager)
+             .WithMany()
+             .HasForeignKey(b => b.ManagerId)
+             .OnDelete(DeleteBehavior.SetNull);
         }
 
     }

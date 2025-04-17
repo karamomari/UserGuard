@@ -110,6 +110,9 @@ namespace UserGuard_API
                 options.AddPolicy("MaintenancePolicy", policy =>
                  policy.RequireRole("Maintenance"));
 
+                options.AddPolicy("SupperAdminPolicy", policy =>
+                policy.RequireRole("SupperAdmin"));
+
                 options.AddPolicy("AdminOrSecretary", policy =>
                     policy.RequireRole("Admin", "Secretary"));
 
@@ -128,14 +131,16 @@ namespace UserGuard_API
             builder.Services.AddScoped<IScheduleRepository, ScheduleRepository>();
             builder.Services.AddScoped<IMaintenanceTaskRepository, MaintenanceTaskRepository>();
 
-            builder.Services.AddScoped<IImageService, ImageService>();
 
-           // builder.Services.AddAutoMapper(typeof(Program));
+            builder.Services.AddScoped<IImageService, ImageService>();
+            builder.Services.AddScoped<IExcelExportService, ExcelExportService>();
+
             builder.Services.AddAutoMapper(typeof(MappingProfile));
 
             builder.Services.AddHttpClient<ResendEmailService>();
             builder.Services.AddMediatR(typeof(Program));
 
+ //           ExcelPackage.License = LicenseContext.NonCommercial;
 
 
             builder.Services.AddCors(op =>

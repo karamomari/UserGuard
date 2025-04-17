@@ -8,6 +8,6 @@
 
         public string? TeacherId { get; set; }
 
-       
+        public  string? Id { get; set; }
     }
 }

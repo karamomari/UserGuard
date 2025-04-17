@@ -14,7 +14,7 @@
         Task<List<Course>> GetCoursesForAdminAsync(string AdminbranchId);
 
         Task<List<Course>> GetAllAsync();
-
+        Task<List<Course>> GetCoursesByBranchToSupperAdminAsync(string branchId);
         Task<IEnumerable<StudentCourse>> GetAllStudentCoursesAsync();
 
         Task<List<Course>> GetCoursesByTeacherIdAsync(string teacherId);

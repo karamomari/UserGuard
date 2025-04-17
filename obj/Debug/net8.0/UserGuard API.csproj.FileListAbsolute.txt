@@ -1,13 +1,30 @@
 C:\Users\karam\OneDrive\Desktop\New Projects\UserGuard API\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\karam\OneDrive\Desktop\New Projects\UserGuard API\bin\Debug\net8.0\appsettings.json
+C:\Users\karam\OneDrive\Desktop\New Projects\UserGuard API\bin\Debug\net8.0\UserGuard API.staticwebassets.runtime.json
 C:\Users\karam\OneDrive\Desktop\New Projects\UserGuard API\bin\Debug\net8.0\UserGuard API.exe
 C:\Users\karam\OneDrive\Desktop\New Projects\UserGuard API\bin\Debug\net8.0\UserGuard API.deps.json
 C:\Users\karam\OneDrive\Desktop\New Projects\UserGuard API\bin\Debug\net8.0\UserGuard API.runtimeconfig.json
 C:\Users\karam\OneDrive\Desktop\New Projects\UserGuard API\bin\Debug\net8.0\UserGuard API.dll
 C:\Users\karam\OneDrive\Desktop\New Projects\UserGuard API\bin\Debug\net8.0\UserGuard API.pdb
+C:\Users\karam\OneDrive\Desktop\New Projects\UserGuard API\bin\Debug\net8.0\AutoMapper.dll
+C:\Users\karam\OneDrive\Desktop\New Projects\UserGuard API\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\karam\OneDrive\Desktop\New Projects\UserGuard API\bin\Debug\net8.0\Azure.Core.dll
 C:\Users\karam\OneDrive\Desktop\New Projects\UserGuard API\bin\Debug\net8.0\Azure.Identity.dll
+C:\Users\karam\OneDrive\Desktop\New Projects\UserGuard API\bin\Debug\net8.0\ClosedXML.dll
+C:\Users\karam\OneDrive\Desktop\New Projects\UserGuard API\bin\Debug\net8.0\ClosedXML.Parser.dll
+C:\Users\karam\OneDrive\Desktop\New Projects\UserGuard API\bin\Debug\net8.0\Spire.Common.dll
+C:\Users\karam\OneDrive\Desktop\New Projects\UserGuard API\bin\Debug\net8.0\Spire.License.dll
+C:\Users\karam\OneDrive\Desktop\New Projects\UserGuard API\bin\Debug\net8.0\Spire.Pdf.dll
+C:\Users\karam\OneDrive\Desktop\New Projects\UserGuard API\bin\Debug\net8.0\Spire.XLS.dll
+C:\Users\karam\OneDrive\Desktop\New Projects\UserGuard API\bin\Debug\net8.0\DocumentFormat.OpenXml.dll
+C:\Users\karam\OneDrive\Desktop\New Projects\UserGuard API\bin\Debug\net8.0\DocumentFormat.OpenXml.Framework.dll
+C:\Users\karam\OneDrive\Desktop\New Projects\UserGuard API\bin\Debug\net8.0\EPPlus.dll
+C:\Users\karam\OneDrive\Desktop\New Projects\UserGuard API\bin\Debug\net8.0\EPPlus.Interfaces.dll
+C:\Users\karam\OneDrive\Desktop\New Projects\UserGuard API\bin\Debug\net8.0\ExcelNumberFormat.dll
 C:\Users\karam\OneDrive\Desktop\New Projects\UserGuard API\bin\Debug\net8.0\Humanizer.dll
+C:\Users\karam\OneDrive\Desktop\New Projects\UserGuard API\bin\Debug\net8.0\MediatR.dll
+C:\Users\karam\OneDrive\Desktop\New Projects\UserGuard API\bin\Debug\net8.0\MediatR.Contracts.dll
+C:\Users\karam\OneDrive\Desktop\New Projects\UserGuard API\bin\Debug\net8.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\karam\OneDrive\Desktop\New Projects\UserGuard API\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\karam\OneDrive\Desktop\New Projects\UserGuard API\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
 C:\Users\karam\OneDrive\Desktop\New Projects\UserGuard API\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
@@ -23,6 +40,8 @@ C:\Users\karam\OneDrive\Desktop\New Projects\UserGuard API\bin\Debug\net8.0\Micr
 C:\Users\karam\OneDrive\Desktop\New Projects\UserGuard API\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll
 C:\Users\karam\OneDrive\Desktop\New Projects\UserGuard API\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
 C:\Users\karam\OneDrive\Desktop\New Projects\UserGuard API\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\karam\OneDrive\Desktop\New Projects\UserGuard API\bin\Debug\net8.0\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\karam\OneDrive\Desktop\New Projects\UserGuard API\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Json.dll
 C:\Users\karam\OneDrive\Desktop\New Projects\UserGuard API\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
 C:\Users\karam\OneDrive\Desktop\New Projects\UserGuard API\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
 C:\Users\karam\OneDrive\Desktop\New Projects\UserGuard API\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
@@ -35,10 +54,13 @@ C:\Users\karam\OneDrive\Desktop\New Projects\UserGuard API\bin\Debug\net8.0\Micr
 C:\Users\karam\OneDrive\Desktop\New Projects\UserGuard API\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
 C:\Users\karam\OneDrive\Desktop\New Projects\UserGuard API\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\karam\OneDrive\Desktop\New Projects\UserGuard API\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\karam\OneDrive\Desktop\New Projects\UserGuard API\bin\Debug\net8.0\Microsoft.IO.RecyclableMemoryStream.dll
 C:\Users\karam\OneDrive\Desktop\New Projects\UserGuard API\bin\Debug\net8.0\Microsoft.OpenApi.dll
 C:\Users\karam\OneDrive\Desktop\New Projects\UserGuard API\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
 C:\Users\karam\OneDrive\Desktop\New Projects\UserGuard API\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
 C:\Users\karam\OneDrive\Desktop\New Projects\UserGuard API\bin\Debug\net8.0\Mono.TextTemplating.dll
+C:\Users\karam\OneDrive\Desktop\New Projects\UserGuard API\bin\Debug\net8.0\RBush.dll
+C:\Users\karam\OneDrive\Desktop\New Projects\UserGuard API\bin\Debug\net8.0\SixLabors.Fonts.dll
 C:\Users\karam\OneDrive\Desktop\New Projects\UserGuard API\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\karam\OneDrive\Desktop\New Projects\UserGuard API\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\karam\OneDrive\Desktop\New Projects\UserGuard API\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
@@ -51,9 +73,12 @@ C:\Users\karam\OneDrive\Desktop\New Projects\UserGuard API\bin\Debug\net8.0\Syst
 C:\Users\karam\OneDrive\Desktop\New Projects\UserGuard API\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
 C:\Users\karam\OneDrive\Desktop\New Projects\UserGuard API\bin\Debug\net8.0\System.Drawing.Common.dll
 C:\Users\karam\OneDrive\Desktop\New Projects\UserGuard API\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\karam\OneDrive\Desktop\New Projects\UserGuard API\bin\Debug\net8.0\System.IO.Packaging.dll
 C:\Users\karam\OneDrive\Desktop\New Projects\UserGuard API\bin\Debug\net8.0\System.Memory.Data.dll
 C:\Users\karam\OneDrive\Desktop\New Projects\UserGuard API\bin\Debug\net8.0\System.Runtime.Caching.dll
+C:\Users\karam\OneDrive\Desktop\New Projects\UserGuard API\bin\Debug\net8.0\System.Security.Cryptography.Pkcs.dll
 C:\Users\karam\OneDrive\Desktop\New Projects\UserGuard API\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\karam\OneDrive\Desktop\New Projects\UserGuard API\bin\Debug\net8.0\System.Security.Cryptography.Xml.dll
 C:\Users\karam\OneDrive\Desktop\New Projects\UserGuard API\bin\Debug\net8.0\System.Security.Permissions.dll
 C:\Users\karam\OneDrive\Desktop\New Projects\UserGuard API\bin\Debug\net8.0\System.Windows.Extensions.dll
 C:\Users\karam\OneDrive\Desktop\New Projects\UserGuard API\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll
@@ -118,6 +143,7 @@ C:\Users\karam\OneDrive\Desktop\New Projects\UserGuard API\bin\Debug\net8.0\runt
 C:\Users\karam\OneDrive\Desktop\New Projects\UserGuard API\bin\Debug\net8.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
 C:\Users\karam\OneDrive\Desktop\New Projects\UserGuard API\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
 C:\Users\karam\OneDrive\Desktop\New Projects\UserGuard API\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+C:\Users\karam\OneDrive\Desktop\New Projects\UserGuard API\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
 C:\Users\karam\OneDrive\Desktop\New Projects\UserGuard API\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\karam\OneDrive\Desktop\New Projects\UserGuard API\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 C:\Users\karam\OneDrive\Desktop\New Projects\UserGuard API\obj\Debug\net8.0\UserGuard API.csproj.AssemblyReference.cache
@@ -127,6 +153,7 @@ C:\Users\karam\OneDrive\Desktop\New Projects\UserGuard API\obj\Debug\net8.0\User
 C:\Users\karam\OneDrive\Desktop\New Projects\UserGuard API\obj\Debug\net8.0\UserGuard API.csproj.CoreCompileInputs.cache
 C:\Users\karam\OneDrive\Desktop\New Projects\UserGuard API\obj\Debug\net8.0\UserGuard API.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\karam\OneDrive\Desktop\New Projects\UserGuard API\obj\Debug\net8.0\UserGuard API.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\karam\OneDrive\Desktop\New Projects\UserGuard API\obj\Debug\net8.0\UserGuard API.sourcelink.json
 C:\Users\karam\OneDrive\Desktop\New Projects\UserGuard API\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\karam\OneDrive\Desktop\New Projects\UserGuard API\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\karam\OneDrive\Desktop\New Projects\UserGuard API\obj\Debug\net8.0\staticwebassets\msbuild.UserGuard API.Microsoft.AspNetCore.StaticWebAssets.props
@@ -141,9 +168,3 @@ C:\Users\karam\OneDrive\Desktop\New Projects\UserGuard API\obj\Debug\net8.0\refi
 C:\Users\karam\OneDrive\Desktop\New Projects\UserGuard API\obj\Debug\net8.0\UserGuard API.pdb
 C:\Users\karam\OneDrive\Desktop\New Projects\UserGuard API\obj\Debug\net8.0\UserGuard API.genruntimeconfig.cache
 C:\Users\karam\OneDrive\Desktop\New Projects\UserGuard API\obj\Debug\net8.0\ref\UserGuard API.dll
-C:\Users\karam\OneDrive\Desktop\New Projects\UserGuard API\bin\Debug\net8.0\UserGuard API.staticwebassets.runtime.json
-C:\Users\karam\OneDrive\Desktop\New Projects\UserGuard API\bin\Debug\net8.0\MediatR.dll
-C:\Users\karam\OneDrive\Desktop\New Projects\UserGuard API\bin\Debug\net8.0\MediatR.Contracts.dll
-C:\Users\karam\OneDrive\Desktop\New Projects\UserGuard API\bin\Debug\net8.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
-C:\Users\karam\OneDrive\Desktop\New Projects\UserGuard API\bin\Debug\net8.0\AutoMapper.dll
-C:\Users\karam\OneDrive\Desktop\New Projects\UserGuard API\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

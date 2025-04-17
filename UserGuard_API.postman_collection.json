@@ -1,0 +1,1478 @@
+{
+	"info": {
+		"_postman_id": "bf0fb5f0-8f76-4911-a5bd-9105f2d416a8",
+		"name": "UserGuard_API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34870968"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"userName\": \"admin\",\r\n  \"email\": \"admin@example.com\",\r\n  \"password\": \"Karam@123\",\r\n  \"phone\": \"0799999944\",\r\n  \"firstName\": \"Karam\",\r\n  \"lastName\": \"Omari\",\r\n  \"Address\" :\"Irbid\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5017/api/Auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5017",
+							"path": [
+								"api",
+								"Auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"let response = pm.response.json(); \r",
+									"let token = response.token;\r",
+									"let Token = \"Bearer \" + token; \r",
+									"\r",
+									"console.log(Token); \r",
+									"pm.collectionVariables.set(\"TokenSupperAdmin\", Token);\r",
+									"\r",
+									"// pm.collectionVariables.set(\"TokenSecretary\", Token);\r",
+									"// pm.collectionVariables.set(\"TokenAdmin\", Token);\r",
+									"// pm.collectionVariables.set(\"TokenTeacher\", Token);\r",
+									"// pm.collectionVariables.set(\"TokenStudent\", Token);\r",
+									"// pm.collectionVariables.set(\"TokenMaintenance\", Token);\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n      \"userName\": \"SupperAdmin\",\r\n      \"password\": \"P@ssw0rd123\"\r\n}\r\n\r\n// {\r\n//        \"userName\": \"admin\",\r\n//        \"password\": \"Karam@123\"\r\n// }\r\n\r\n// {\r\n//       \"userName\": \"TestAdminCreathtrjk\",\r\n//       \"password\": \"P@ssw0rd123\"\r\n// }\r\n\r\n\r\n// {\r\n//       \"userName\": \"Teacher\",\r\n//       \"password\": \"P@ssw0rd123\"\r\n// }\r\n\r\n// {\r\n//       \"userName\": \"ahmadstudent\",\r\n//       \"password\": \"P@ssw0rd123\"\r\n// }\r\n\r\n// {\r\n//        \"userName\": \"Maintenance\",\r\n//        \"password\": \"P@ssw0rd123\"\r\n// }\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5017/api/Auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5017",
+							"path": [
+								"api",
+								"Auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ForgetPassword",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"karamomari20010@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5017/api/Auth/forgot-password",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5017",
+							"path": [
+								"api",
+								"Auth",
+								"forgot-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "reset-password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"karamomari20010@gmail.com\",\r\n  \"token\": \"CfDJ8Ks9w5yYYO9PksDWmxmh7D5dFhuuHbKCC7+B984uJfkcMn68AiTg6D1XaEg1hxA7ruNdAUHq0rfkEp0me0QssmX+Li6VgkNWml1uVCxtjw4aT01Aora13/hjkbrIU+9vyW0JRcz6unpj/I23YkhJHKHXNqE7ULxZpgsAAmGCuwnimU7IDuNq5ZJzBSzuTyLy0jaed0KJgqgZYgqD37yDf0bpZGDGARoFqatMBURafBrz\",\r\n  \"newPassword\": \"YourNewSecurePassword123!\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5017/api/Auth/reset-password",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5017",
+							"path": [
+								"api",
+								"Auth",
+								"reset-password"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Admin_GetAllEmpInBranch",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{TokenAdmin}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5017/api/Admin/branch-employees",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5017",
+							"path": [
+								"api",
+								"Admin",
+								"branch-employees"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Admin_CreateEmp",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{TokenAdmin}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"userName\": \"SupperAdmin\",\r\n  \"email\": \"SupperAdmin20010@gmail.com\",\r\n  \"phone\": \"+1234567950\",\r\n  \"password\": \"P@ssw0rd123\",\r\n  \"firstName\": \"Super\",\r\n  \"lastName\": \"Admin\",\r\n  \"dateOfBirth\": \"1990-05-15T00:00:00.000Z\",\r\n  \"role\": \"SupperAdmin\",\r\n  \"salary\": 5000,\r\n  \"specialization\": \"Supper Admin\",\r\n  \"branchId\": \"2\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5017/api/Admin/register-employee",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5017",
+							"path": [
+								"api",
+								"Admin",
+								"register-employee"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Admin_GetEmpById",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{TokenAdmin}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5017/api/Admin/employee/45b60d1f-a405-4325-a445-fd465441131f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5017",
+							"path": [
+								"api",
+								"Admin",
+								"employee",
+								"45b60d1f-a405-4325-a445-fd465441131f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Admin_UpdateEmp",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{TokenAdmin}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Salary\":6000,\r\n    \"Specialization\":\"TeamLedarr\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5017/api/Admin/employee/864d554f-b676-4992-98f9-0eed3d0954fc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5017",
+							"path": [
+								"api",
+								"Admin",
+								"employee",
+								"864d554f-b676-4992-98f9-0eed3d0954fc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Admin_CreateCourse",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{TokenAdmin}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \".NET\",\r\n  \"description\": \"This course covers the basics of programming using C# and .NET.\",\r\n  \"creditHours\": 3,\r\n  \"teacherId\": \"45b60d1f-a405-4325-a445-fd465441131f\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5017/api/course",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5017",
+							"path": [
+								"api",
+								"course"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Admin_AddTask",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{TokenAdmin}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "imageFiles",
+									"type": "file",
+									"src": "postman-cloud:///1ef11c8a-163d-4320-9b3a-479060ef973d"
+								},
+								{
+									"key": "TaskDescription",
+									"value": "Fix the broken test",
+									"type": "text"
+								},
+								{
+									"key": "TaskDate",
+									"value": "2025-04-14T10:00:00",
+									"type": "text"
+								},
+								{
+									"key": "TaskEnd",
+									"value": "2025-04-14T16:00:00",
+									"type": "text"
+								},
+								{
+									"key": "Notes",
+									"value": "Make sure to check the thermostat as well",
+									"type": "text"
+								},
+								{
+									"key": "EmployeeId",
+									"value": "d5076c60-f0bb-4ae8-8d9d-affe7b22ebe6",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5017/api/Admin/AddTask",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5017",
+							"path": [
+								"api",
+								"Admin",
+								"AddTask"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Admin_UpdateTask",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{TokenAdmin}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "imageFiles",
+									"type": "file",
+									"src": "postman-cloud:///1ef11c8a-163d-4320-9b3a-479060ef973d"
+								},
+								{
+									"key": "TaskDescription",
+									"value": "test updatettttttttttt",
+									"type": "text"
+								},
+								{
+									"key": "TaskDate",
+									"value": "2025-04-14T10:00:00",
+									"type": "text"
+								},
+								{
+									"key": "TaskEnd",
+									"value": "2025-04-14T16:00:00",
+									"type": "text"
+								},
+								{
+									"key": "Notes",
+									"value": "Make sure to check the thermostat as well",
+									"type": "text"
+								},
+								{
+									"key": "EmployeeId",
+									"value": "d5076c60-f0bb-4ae8-8d9d-affe7b22ebe6",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5017/api/SharedTask/UpdateTask/82e4c353-f3ce-4c39-b2de-02fa2d880afa",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5017",
+							"path": [
+								"api",
+								"SharedTask",
+								"UpdateTask",
+								"82e4c353-f3ce-4c39-b2de-02fa2d880afa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Admin_GetCoursId",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{TokenAdmin}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5017/api/course/29cc76f0-7bee-4079-989b-1770cdffbd0c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5017",
+							"path": [
+								"api",
+								"course",
+								"29cc76f0-7bee-4079-989b-1770cdffbd0c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Admin_GetAllCourse",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{TokenAdmin}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5017/api/course/29cc76f0-7bee-4079-989b-1770cdffbd0c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5017",
+							"path": [
+								"api",
+								"course",
+								"29cc76f0-7bee-4079-989b-1770cdffbd0c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Admin_UpdateCourse",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{TokenAdmin}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Updated AI Fundamentals\",\r\n  \"description\": \"Advanced concepts in machine learning and neural networksdd.\",\r\n  \"creditHours\": 5,\r\n  \"teacherId\": \"a7c83154-0319-4cf6-b0cb-e469e60a47b8\" \r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5017/api/course/updatecourse/29cc76f0-7bee-4079-989b-1770cdffbd0c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5017",
+							"path": [
+								"api",
+								"course",
+								"updatecourse",
+								"29cc76f0-7bee-4079-989b-1770cdffbd0c"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Teacher",
+			"item": [
+				{
+					"name": "Teacher_GetMyCourse",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{TokenTeacher}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5017/api/Teacher/MyCourses",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5017",
+							"path": [
+								"api",
+								"Teacher",
+								"MyCourses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Teacher_ScheduleExam",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{TokenTeacher}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"courseId\": \"5395df24-c4fd-4162-a45f-d558d8233257\",\r\n  \"dayOfWeek\": \"Sunday\",\r\n  \"startTime\": \"09:00:00\",\r\n  \"endTime\": \"10:30:00\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5017/api/Teacher/ScheduleExam",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5017",
+							"path": [
+								"api",
+								"Teacher",
+								"ScheduleExam"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Teacher_AddGrade",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{TokenTeacher}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"studentId\": \"813237bf-adc6-4c8d-af1f-0f34c2504db0\",\r\n  \"courseId\": \"5395df24-c4fd-4162-a45f-d558d8233257\",\r\n  \"mark\": 55.4\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5017/api/Teacher/AddGrade",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5017",
+							"path": [
+								"api",
+								"Teacher",
+								"AddGrade"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Teacher_UpdateGrade",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{TokenTeacher}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"studentId\": \"9701ca48-fd1c-434c-9ad4-7add5044b0b9\",\r\n  \"courseId\": \"5395df24-c4fd-4162-a45f-d558d8233257\",\r\n  \"mark\": 55.4\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5017/api/Teacher/UpdateGrade",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5017",
+							"path": [
+								"api",
+								"Teacher",
+								"UpdateGrade"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Secretary",
+			"item": [
+				{
+					"name": "Secretary_GetAllStuInBranch",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{TokenSecretary}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5017/api/Secretary/Students",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5017",
+							"path": [
+								"api",
+								"Secretary",
+								"Students"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Secretary_GetAllCoursesInBranch",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{TokenSecretary}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5017/api/Secretary/GetAllCourses",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5017",
+							"path": [
+								"api",
+								"Secretary",
+								"GetAllCourses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Secretary_DeletStudentByID",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{TokenSecretary}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5017/api/Secretary/DeleteStudent/68a869f3-ac6a-4159-ae60-44aaa9a019f0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5017",
+							"path": [
+								"api",
+								"Secretary",
+								"DeleteStudent",
+								"68a869f3-ac6a-4159-ae60-44aaa9a019f0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Secretary_GetStudentByID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{TokenSecretary}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5017/api/Secretary/Student/8ff6d38b-b552-45ed-be36-a0caa6fe656a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5017",
+							"path": [
+								"api",
+								"Secretary",
+								"Student",
+								"8ff6d38b-b552-45ed-be36-a0caa6fe656a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Secretary_CreateStudent",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{TokenSecretary}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"UserName\": \"ahmadstudent\",\r\n  \"Email\": \"ahmahd@studennmmmhjjmhnt.com\",\r\n  \"Phone\": \"0791234567\",\r\n  \"FirstName\": \"Student\",\r\n  \"LastName\": \"Taha\",\r\n  \"Password\": \"P@ssw0rd123\",\r\n  \"FullName\": \"Ahmad Taha\",\r\n  \"CourseNames\": [\"Math\", \"Physics\"]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5017/api/Secretary/RegisterStudent",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5017",
+							"path": [
+								"api",
+								"Secretary",
+								"RegisterStudent"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Secretary_RegisterStudentInCourse",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{TokenSecretary}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"studentId\":\"9701ca48-fd1c-434c-9ad4-7add5044b0b9\",\r\n \"courseName\":\".NET\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5017/api/Secretary/RegisterStudentInCourse",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5017",
+							"path": [
+								"api",
+								"Secretary",
+								"RegisterStudentInCourse"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Secretary_UpdtaeStudent",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{TokenSecretary}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"fullName\": \"testt Al test\",\r\n  \"courseNames\": [\"ds\"]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5017/api/Secretary/UpdateStudent/68a869f3-ac6a-4159-ae60-44aaa9a019f0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5017",
+							"path": [
+								"api",
+								"Secretary",
+								"UpdateStudent",
+								"68a869f3-ac6a-4159-ae60-44aaa9a019f0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Secretary_AddTask",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{TokenSecretary}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "imageFiles",
+									"type": "file",
+									"src": "/C:/Users/karam/Downloads/MergedImages.png"
+								},
+								{
+									"key": "TaskDescription",
+									"value": "Fix the broken AC",
+									"type": "text"
+								},
+								{
+									"key": "TaskDate",
+									"value": "2025-04-14T10:00:00",
+									"type": "text"
+								},
+								{
+									"key": "TaskEnd",
+									"value": "2025-04-14T16:00:00",
+									"type": "text"
+								},
+								{
+									"key": "Notes",
+									"value": "Make sure to check the thermostat as well",
+									"type": "text"
+								},
+								{
+									"key": "EmployeeId",
+									"value": "d5076c60-f0bb-4ae8-8d9d-affe7b22ebe6",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5017/api/SharedTask/AddTask",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5017",
+							"path": [
+								"api",
+								"SharedTask",
+								"AddTask"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Student",
+			"item": [
+				{
+					"name": "Stydent_GetMyCourses",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{TokenStudent}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5017/api/Student/MyCourses",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5017",
+							"path": [
+								"api",
+								"Student",
+								"MyCourses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Stydent_GetMycolleagues",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{TokenStudent}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5017/api/Student/Mycolleagues",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5017",
+							"path": [
+								"api",
+								"Student",
+								"Mycolleagues"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Maintenance",
+			"item": [
+				{
+					"name": "Maintenance_GetMyTasks",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{TokenMaintenance}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5017/api/Maintenance/MyTasks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5017",
+							"path": [
+								"api",
+								"Maintenance",
+								"MyTasks"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "SharedBetweenEmployee",
+			"item": [
+				{
+					"name": "Shared_UpdateTask",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{TokenAdmin}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "imageFiles",
+									"type": "file",
+									"src": "postman-cloud:///1ef11c8a-163d-4320-9b3a-479060ef973d"
+								},
+								{
+									"key": "TaskDescription",
+									"value": "test updatettttttttttt",
+									"type": "text"
+								},
+								{
+									"key": "TaskDate",
+									"value": "2025-04-14T10:00:00",
+									"type": "text"
+								},
+								{
+									"key": "TaskEnd",
+									"value": "2025-04-14T16:00:00",
+									"type": "text"
+								},
+								{
+									"key": "Notes",
+									"value": "Make sure to check the thermostat as well",
+									"type": "text"
+								},
+								{
+									"key": "EmployeeId",
+									"value": "d5076c60-f0bb-4ae8-8d9d-affe7b22ebe6",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5017/api/SharedTask/UpdateTask/82e4c353-f3ce-4c39-b2de-02fa2d880afa",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5017",
+							"path": [
+								"api",
+								"SharedTask",
+								"UpdateTask",
+								"82e4c353-f3ce-4c39-b2de-02fa2d880afa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Shared_AddTask",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{TokenSecretary}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "imageFiles",
+									"type": "file",
+									"src": "/C:/Users/karam/Downloads/MergedImages.png"
+								},
+								{
+									"key": "TaskDescription",
+									"value": "Fix the broken AC",
+									"type": "text"
+								},
+								{
+									"key": "TaskDate",
+									"value": "2025-04-14T10:00:00",
+									"type": "text"
+								},
+								{
+									"key": "TaskEnd",
+									"value": "2025-04-14T16:00:00",
+									"type": "text"
+								},
+								{
+									"key": "Notes",
+									"value": "Make sure to check the thermostat as well",
+									"type": "text"
+								},
+								{
+									"key": "EmployeeId",
+									"value": "d5076c60-f0bb-4ae8-8d9d-affe7b22ebe6",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5017/api/SharedTask/AddTask",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5017",
+							"path": [
+								"api",
+								"SharedTask",
+								"AddTask"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "SupperAdmin",
+			"item": [
+				{
+					"name": "GetBranchDetails",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{TokenSupperAdmin}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5017/api/SuperAdmin/GetBranchDetails/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5017",
+							"path": [
+								"api",
+								"SuperAdmin",
+								"GetBranchDetails",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "export-excel",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{TokenSupperAdmin}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5017/api/SuperAdmin/export-excel/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5017",
+							"path": [
+								"api",
+								"SuperAdmin",
+								"export-excel",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllBranch",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{TokenSupperAdmin}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5017/api/SuperAdmin/GetAllBranch",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5017",
+							"path": [
+								"api",
+								"SuperAdmin",
+								"GetAllBranch"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateBranch",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{TokenSupperAdmin}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5017/api/SuperAdmin/GetBranchDetails/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5017",
+							"path": [
+								"api",
+								"SuperAdmin",
+								"GetBranchDetails",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateBranch",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{TokenSupperAdmin}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"new Branch\",\r\n  \"location\": \"Amman\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5017/api/SuperAdmin/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5017",
+							"path": [
+								"api",
+								"SuperAdmin",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "TokenAdmin",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "TokenSecretary",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "TokenِِAdmin",
+			"value": ""
+		},
+		{
+			"key": "TokenِِSecretary",
+			"value": ""
+		},
+		{
+			"key": "TokenTeacher",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "TokenStudent",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "TokenMaintenance",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "TokenSupperAdmin",
+			"value": "",
+			"type": "string"
+		}
+	]
+}

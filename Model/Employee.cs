@@ -21,6 +21,7 @@ namespace UserGuard_API.Model
         [ForeignKey("User")]
         public string ApplicationUserId { get; set; }
         public ApplicationUser User { get; set; }
+
     }
 
 }

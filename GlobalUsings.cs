@@ -6,6 +6,9 @@ global using System.Security.Claims;
 global using MediatR;
 global using UserGuard_API.Events;
 global using AutoMapper;
+global using Microsoft.AspNetCore.Mvc.Filters;
+global using OfficeOpenXml;
+
 
 global using Microsoft.AspNetCore.Http;
 global using Microsoft.AspNetCore.Identity;

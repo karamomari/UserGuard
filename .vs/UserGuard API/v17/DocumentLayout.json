@@ -1,12 +1,37 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\karam\\OneDrive\\Desktop\\New Projects\\UserGuard API\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{12D4DECA-0AF3-4B32-8323-2FB21CA8CCB5}|UserGuard API.csproj|c:\\users\\karam\\onedrive\\desktop\\new projects\\userguard api\\controllers\\superadmincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12D4DECA-0AF3-4B32-8323-2FB21CA8CCB5}|UserGuard API.csproj|solutionrelative:controllers\\superadmincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SuperAdminController.cs",
+              "DocumentMoniker": "C:\\Users\\karam\\OneDrive\\Desktop\\New Projects\\UserGuard API\\Controllers\\SuperAdminController.cs",
+              "RelativeDocumentMoniker": "Controllers\\SuperAdminController.cs",
+              "ToolTip": "C:\\Users\\karam\\OneDrive\\Desktop\\New Projects\\UserGuard API\\Controllers\\SuperAdminController.cs",
+              "RelativeToolTip": "Controllers\\SuperAdminController.cs",
+              "ViewState": "AQIAACYAAAAAAAAAAAAAAGEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-17T18:14:13.882Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

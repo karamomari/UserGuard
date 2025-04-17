@@ -1,41 +1,38 @@
 ﻿namespace UserGuard_API.Middleware
 {
-    public class MaintenanceOnlyMiddleware
+    public class MaintenanceOnlyAttribute : Attribute, IAuthorizationFilter
     {
-        private readonly RequestDelegate _next;
-
-        public MaintenanceOnlyMiddleware(RequestDelegate next)
+        public void OnAuthorization(AuthorizationFilterContext context)
         {
-            _next = next;
-        }
+            var user = context.HttpContext.User;
 
-        public async Task InvokeAsync(HttpContext context)
-        {
-            if (context.User?.Identity?.IsAuthenticated != true)
+            if (!user.Identity.IsAuthenticated)
             {
-                context.Response.StatusCode = StatusCodes.Status401Unauthorized;
-                await context.Response.WriteAsJsonAsync(new GeneralResponse
+                context.Result = new JsonResult(new
                 {
                     Success = false,
                     Data = "Unauthorized: User not authenticated"
-                });
+                })
+                {
+                    StatusCode = StatusCodes.Status401Unauthorized
+                };
                 return;
             }
 
-            var role = context.User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Role)?.Value;
+            var role = user.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Role)?.Value;
 
             if (role != "Maintenance")
             {
-                context.Response.StatusCode = StatusCodes.Status403Forbidden;
-                await context.Response.WriteAsJsonAsync(new GeneralResponse
+                context.Result = new JsonResult(new
                 {
                     Success = false,
-                    Data = "Forbidden: Only maintenance staff can access this endpoint"
-                });
-                return;
+                    Data = "Forbidden: Only maintenance personnel can access this endpoint"
+                })
+                {
+                    StatusCode = StatusCodes.Status403Forbidden
+                };
             }
-
-            await _next(context);
         }
     }
+
 }

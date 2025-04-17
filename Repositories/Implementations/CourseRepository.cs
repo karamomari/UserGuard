@@ -119,6 +119,13 @@ namespace UserGuard_API.Repositories.Implementations
             return courses;
         }
 
+        public async Task<List<Course>> GetCoursesByBranchToSupperAdminAsync(string branchId)
+        {
+            return await context.Courses
+                .Where(c => c.BranchId == branchId)
+                .ToListAsync();
+        }
+
     }
 
 }

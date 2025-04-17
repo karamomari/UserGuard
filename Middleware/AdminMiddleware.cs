@@ -1,38 +1,37 @@
-﻿// Middleware/AdminMiddleware.cs
-public class AdminMiddleware
+﻿namespace UserGuard_API.Middleware
 {
-    private readonly RequestDelegate _next;
-
-    public AdminMiddleware(RequestDelegate next)
+    public class AdminOnlyAttribute : Attribute, IAuthorizationFilter
     {
-        _next = next;
-    }
-
-    public async Task InvokeAsync(HttpContext context, UserManager<ApplicationUser> userManager)
-    {
-        if (context.User?.Identity?.IsAuthenticated != true)
+        public void OnAuthorization(AuthorizationFilterContext context)
         {
-            context.Response.StatusCode = StatusCodes.Status401Unauthorized;
-            await context.Response.WriteAsJsonAsync(new GeneralResponse
+            var user = context.HttpContext.User;
+
+            if (!user.Identity.IsAuthenticated)
             {
-                Success = false,
-                Data = "Unauthorized: User not authenticated"
-            });
-            return;
-        }
-        var user = await userManager.GetUserAsync(context.User);
+                context.Result = new JsonResult(new
+                {
+                    Success = false,
+                    Data = "Unauthorized: User not authenticated"
+                })
+                {
+                    StatusCode = StatusCodes.Status401Unauthorized
+                };
+                return;
+            }
 
-        // إذا كان اليوزر أدمن، استمر في الـ Request
-        if (user != null && await userManager.IsInRoleAsync(user, "Admin"))
-        {
-            await _next(context);
-        }
-        else
-        {
-          
-            context.Response.StatusCode = StatusCodes.Status403Forbidden;
-            await context.Response.WriteAsJsonAsync(new GeneralResponse { Success = false, Data = "You do not have permission to access this resource." });
-            return;
+            var role = user.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Role)?.Value;
+
+            if (role != "Admin")
+            {
+                context.Result = new JsonResult(new
+                {
+                    Success = false,
+                    Data = "Forbidden: Only admins can access this endpoint"
+                })
+                {
+                    StatusCode = StatusCodes.Status403Forbidden
+                };
+            }
         }
     }
 }

@@ -49,6 +49,18 @@
               "target": "Package",
               "version": "[12.0.1, )"
             },
+            "ClosedXML": {
+              "target": "Package",
+              "version": "[0.104.2, )"
+            },
+            "ClosedXML_Excel": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "EPPlus": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            },
             "MediatR.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
               "version": "[11.1.0, )"
